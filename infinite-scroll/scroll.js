@@ -7,7 +7,7 @@ const getData = () => {
         .then((data) => data.json())
         .then((res) => {
             console.log(res);
-            console.log(page);
+            console.log("Page:",page);
             showData(res)
         })
     
@@ -17,7 +17,7 @@ getData()
 const showData=(data)=> {
     
     data.forEach((d) => {
-        let name = document.createElement('h1');
+        let name = document.createElement('h2');
         name.innerText = d.title;
         container.append(name);
     })

@@ -7,3 +7,8 @@ div{
     margin: auto;
     border-radius: 20px;
 }
+
+h2{
+    color:navy;
+    font-weight:900;
+}
