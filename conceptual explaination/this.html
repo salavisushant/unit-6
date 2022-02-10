@@ -1,0 +1,32 @@
+<script>
+"use strict";
+// this key refers which object belongs to
+//this is fro single owner
+console.log(this);
+
+// in function 
+
+function sum(){
+    var a = 10;
+    var b= 15;
+    console.log(a+b);
+    console.log(this);
+}
+
+sum()
+
+//in this method this keywoed refers to the owner object
+
+let details = {
+    name: 'Sushant',
+    city: 'Kolhapur',
+    address: function() {
+        console.log("I am "+this.name+" from "+this.city);
+        console.log(this)
+    }
+}
+
+details.address()
+
+
+</script>
