@@ -1,11 +1,13 @@
+import {Link} from "react-router-dom"
 
-import {Home} from "./Home"
 export const Navbar = () => {
     return (
-        <>
-        <h1>Navbar</h1>
-        <Home/>
-        </>
+        <div style={{display: 'flex', justifyContent:"space-around",border:"3px solid navy",fontSize:"30px",fontWeight:"600"}}>
+            <Link to="/">Home</Link>
+            <Link to="/about">About</Link>
+            <Link to="/signin">Login</Link>
+            <Link to="/contact">Contact</Link>
+        </div>
         
     )
 }
