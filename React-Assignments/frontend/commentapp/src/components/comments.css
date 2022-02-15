@@ -1,0 +1,32 @@
+.mainDiv{
+    border:2px solid purple;
+    width:50%;
+    text-align:center;
+    margin-left:25%;
+    margin-top:1%;
+    border-radius:30px 0px 30px 0px;
+}
+
+.InputForm{
+    margin-top: 2%;
+}
+
+.InputForm  input{
+    width:40%;
+    height:25px;
+    border:2px solid #2c3e50;
+    border-radius:10px;
+}
+
+.InputForm button{
+    cursor: pointer;
+    margin-left: 1%;
+    width:6%;
+    height:30px;
+    border:none;
+    background-color:#2ecc71;
+    font-size: 1.3vw;
+    font-weight:600;
+    color:black;
+    border-radius:10px;
+}
