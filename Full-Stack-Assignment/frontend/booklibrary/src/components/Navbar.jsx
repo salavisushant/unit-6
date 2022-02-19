@@ -23,7 +23,7 @@ export const Navbar = () => {
     return (
         <Div>
              <img style={{width: '6%', height: '70px',marginLeft:"2%"}} src="https://user-images.githubusercontent.com/87421852/154792165-fbba1305-27fd-4bc9-a4da-f50cfa9cc44e.png" alt=""/>
-            <Link style={{ marginLeft: "22%", fontWeight: "bold", fontSize: "17px", textDecoration: "none", color: '#282C3F' }} to="/">Home</Link>
+            <Link style={{ marginLeft: "22%", fontWeight: "bold", fontSize: "17px", textDecoration: "none", color: '#282C3F' }} to="/home">Home</Link>
             <Link style={{ marginLeft: "22%", fontWeight: "bold", fontSize: "17px", textDecoration: "none", color: '#282C3F' }} to="/">Login</Link>
             <Link style={{ marginLeft: "22%", fontWeight: "bold", fontSize: "17px", textDecoration: "none", color: '#282C3F' }} to="/author">Author</Link>
            

@@ -48,7 +48,7 @@ export const Home = () => {
         <Td >{ e.title }</Td>
         <Td>{e.authors[0]}</Td>
         <Td >{e.categories[0]}</Td>
-        <Td><Link to={`/books/${e._id}`}>Details</Link> </Td>
+        <Td><Link to={`/books/${e._id}`}><Button colorScheme='blue' variant='link'>Details</Button></Link> </Td>
         </Tr>
           ))
       }
