@@ -21,7 +21,7 @@ function runProgram(input) {
     input = input.trim().split("\n");
     var n = +input[0];
     var str = input[1].trim().split("");
-    console.log( stringCordin(n, str));
+    console.log(stringCordin(n, str));
    
 }
 
