@@ -1,27 +1,25 @@
 function flowerSum(n, k, arr) {
-    if (k == 0) {
-        return true;
-    }
-
-    let out = 0;
-    let temp = false;
-
-    for (let i = 0; i < arr.length; i++) {
-        if (arr[i] || arr[i - 1] === 1) {
-            continue;
-        } else if (arr[i + 1] === 1) {
-            i = i + 2;
+  
+    for (var i = 0; i < n; i++){
+        if (arr[i] === 1) {
             continue;
         }
-        out += 1;
-        arr[i++] = 1;
+        if (i == 0 && arr[i + 1] == 0) {
+            arr[i] = 1;
+            k--
+        } else if (i == n - 1 && arr[i - 1] == 0) {
+            arr[i] = 1;
+            k--;
+        } else if (arr[i - 1] == 0 && arr[i + 1] == 0) {
+            arr[i] = 1;
+            k--;
+        }
 
-        if (out === k) {
-            temp = true;
-            break;
+        if (k == 0) {
+            return "Yes"
         }
     }
-    return temp;
+   return "No";
 }
 
 function runProgram(input) {
@@ -29,14 +27,10 @@ function runProgram(input) {
     var test = +input[0];
     var line = 1;
 
-    for (var i = 0; i < test; i++){
+    for (var i = 0; i < test; i++) {
         var [n, k] = input[line++].trim().split(" ").map(Number);
         var arr = input[line++].trim().split(" ").map(Number);
-        if (flowerSum(n, k, arr) === true) {
-          console.log("Yes");
-        } else {
-            console.log("No");
-      }
+        console.log(flowerSum(n, k, arr))
     }
    
 }
