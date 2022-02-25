@@ -26,7 +26,7 @@ export const Login = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         console.log(form);
-        fetch("https://full-stack-assignments.herokuapp.com/user", {
+        fetch("https://myclonedata.herokuapp.com/user", {
             method: "POST",
             body: JSON.stringify(form),
             headers: {

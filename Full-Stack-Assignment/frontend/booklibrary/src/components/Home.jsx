@@ -17,7 +17,7 @@ export const Home = () => {
     },[page])
 
     const getData = async(page) => {
-        let res = await fetch(`https://full-stack-assignments.herokuapp.com/books?page=${page}&size=5`);
+        let res = await fetch(`https://myclonedata.herokuapp.com/books?page=${page}&size=5`);
         let data = await res.json();
         console.log(data);
         setData(data.books);

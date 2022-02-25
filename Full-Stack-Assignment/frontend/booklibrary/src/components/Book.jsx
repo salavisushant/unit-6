@@ -41,7 +41,7 @@ export const BookDetails = () => {
     },[]);
 
     const getData = async () => {
-        let res = await fetch(`https://full-stack-assignments.herokuapp.com/books/${id}`);
+        let res = await fetch(`https://myclonedata.herokuapp.com/books/${id}`);
         let d = await res.json();
         setData(d);
         console.log(d);
