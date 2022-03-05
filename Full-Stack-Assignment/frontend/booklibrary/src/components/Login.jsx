@@ -14,7 +14,7 @@ export const Login = () => {
     const [form, setForm] = useState(null);
     
     const handleChange = (e) => {
-        let { name, value } = e.target;
+        let { name,value } = e.target;
         setForm({
             ...form,
             [name]: value

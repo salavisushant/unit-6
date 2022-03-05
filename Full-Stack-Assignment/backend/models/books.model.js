@@ -9,7 +9,7 @@ const booksSchema = new mongoose.Schema({
     shortDescription: { type: String },
     longDescription: { type: String },
     authors: [{ type: String }],
-    categories:[{type: String}]
+    categories:{type: String}
 
 }, { 
     timestamps: true,

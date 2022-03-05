@@ -18,15 +18,18 @@ router.get('/', async (req, res) => {
 });
 
 
-// router.get('/:query', async (req, res) => {
-//     try {
-//         const booksOne = await Books.find({"categories":["Java"]});
-//         return res.status.send({ booksOne })
-    
-//     } catch (e) {
-//         return res.status(500).json({ status: 'Failed', message: e.message });
-//     }
-// });
+router.get('/:query', async (req, res) => {
+    try {
+        const page = +req.query.page;
+        const size = +req.query.size;
+        const skip = (page - 1) * size;
+        const books = await Books.find({categories:{$eq: req.params.query}}).skip(skip).limit(size).lean().exec();
+        const totalPages = Math.ceil((await Books.find().countDocuments()) / size);
+        return res.status(201).send({books});
+    } catch (e) {
+        return res.status(500).json({ status: 'Failed', message: e.message });
+    }
+});
 
 
 

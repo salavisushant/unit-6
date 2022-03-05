@@ -1,22 +1,13 @@
 
-var str = "aaabbbbcccdddee"
+// var pipeline = [
+//     {$sort:{"age":1}}
+// ]
+// db.users.aggregate(pipeline)
 
-var details = {};
 
-for (var i = 0; i < str.length; i++){
-    if (details[str[i]] === undefined) {
-        details[str[i]] = 1;
-    } else {
-        var prev = details[str[i]];
-        details[str[i]] = prev + 1;
-    }
-
-}
-var out = ""
-for (key in details) {
-    out+=key+details[key];
-}
-
-console.log(out);
-
+// var pipeline = [
+//     {$sort:{"age":1}},
+//     {$limit:3}
+// ]
+// db.users.aggregate(pipeline)
 
