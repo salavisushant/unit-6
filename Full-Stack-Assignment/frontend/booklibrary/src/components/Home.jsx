@@ -31,9 +31,9 @@ export const Home = () => {
 
   const getData = async () => {
     if (form.Type) {
-      var res = await fetch(`http://localhost:4000/books/${form.Type}?page=${page}&size=5`)
+      var res = await fetch(`https://full-stack-assignments.herokuapp.com/books/${form.Type}?page=${page}&size=5`)
     } else {
-      var res = await fetch(`http://localhost:4000/books/?page=${page}&size=5`)
+      var res = await fetch(`https://full-stack-assignments.herokuapp.com/books/?page=${page}&size=5`)
     }
     let data = await res.json();
     console.log(data);
