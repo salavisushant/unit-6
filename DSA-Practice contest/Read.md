@@ -92,3 +92,9 @@ promise.then((res) => {
     .catch((err) => {
     console.log(err);
 })
+
+
+Difference between state and props;
+1. state and props both are plain JavaScript object
+2. both are handling information which is very important to rendering.
+3. props are get passed into component and state are manage the componenets.
