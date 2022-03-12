@@ -98,3 +98,9 @@ Difference between state and props;
 1. state and props both are plain JavaScript object
 2. both are handling information which is very important to rendering.
 3. props are get passed into component and state are manage the componenets.
+
+Context API---
+    Its share state with component easy and cleaner way
+    
+Prop drilling:--->
+    Prop drilling refers to the process of sending props from a higher-level component to a lower-level component.
