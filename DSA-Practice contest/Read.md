@@ -1,5 +1,5 @@
 
---------> this is for call method <--------------
+## this is for call method <--------------
 
 var person1 = { fname: "sushant", lname: "salavi" }
 
@@ -10,8 +10,7 @@ function greeTing(a) {
 greeTing.call(person1,"Hello")
 
 
-
--------------> This is for apply method <--------------
+## This is for apply method <--------------
 the apply method is same as call method but its takes arguments differently
 in apply method we have to take arguments in array fromat
 
@@ -23,7 +22,7 @@ function greeTing(a) {
 greeTing.apply(person1,["Hello"])
 
 
---------------> This is for Bind method <--------------------
+## This is for Bind method <--------------------
 
 we can bind perticuler function in bind method and use it later
 
@@ -37,8 +36,7 @@ var someValue = greeTing.bind(person);
 someValue()
 
 
-
----------------->Constructor function <------------------
+## Constructor function <------------------
 
 new keyword creates new blank or plain javascript object
 new keyword is mandatory in constructor function
@@ -53,8 +51,7 @@ function Person(a, b, c) {
 var student = new Person("Sushant", 25, "male");
 console.log(student);
 
-
--------------> Prototype and inheritance <-------------------
+## Prototype and inheritance <-------------------
 
 
 constructor function
@@ -63,7 +60,7 @@ function Person () {
     this.age = 23
 }
 
-creating objects
+## creating objects
 const person1 = new Person();
 const person2 = new Person();
 
@@ -75,7 +72,7 @@ prototype value of Person
 console.log(Person.prototype);
 
 
----------> Promise in javascript <-------------------
+## Promise in javascript <-------------------
 
 var promise = new Promise((resolve, reject)=> {
     var a = 3;
@@ -89,12 +86,12 @@ var promise = new Promise((resolve, reject)=> {
 promise.then((res) => {
     console.log(res)
 })
-    .catch((err) => {
+.catch((err) => {
     console.log(err);
 })
 
 
-Difference between state and props;
+## Difference between state and props;
 1. state and props both are plain JavaScript object
 2. both are handling information which is very important to rendering.
 3. props are get passed into component and state are manage the componenets.
