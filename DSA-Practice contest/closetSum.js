@@ -13,7 +13,6 @@ function closestSum(n, k, arr) {
         return Math.abs(max_sum);
     }
     return max_sum;
-   
 }
 
 function runProgram(input) {
