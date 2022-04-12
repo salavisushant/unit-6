@@ -2,6 +2,7 @@
     margin-left: 5%;
     margin-right: 5%;
     margin-top: 6%;
+    border: 1px solid black;
 }
 
 Table{
@@ -12,6 +13,9 @@ Table{
 .buttonDiv{
     display:flex;
     justify-content: space-between;
+    gap:1%;
+    margin-top:1%;
+
 }
 
 .buttonDiv>p{
@@ -19,10 +23,5 @@ Table{
     font-weight:500;
 }
 
-@media screen and (min-width: 400px) {
-  .buttonDiv{
-    margin-left:80%;
-    margin-top: 1%;
-}
-}
+
 

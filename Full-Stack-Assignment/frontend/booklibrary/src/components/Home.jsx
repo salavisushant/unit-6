@@ -12,6 +12,7 @@ export const Home = () => {
   const [set, setData] = useState([]);
   const [page, setPage] = useState(1);
   const [form, setForm] = useState("");
+  const [size, setSize] = useState("")
     
     const handleChange = async(e) => {
         let { name, value } = e.target;
@@ -21,6 +22,8 @@ export const Home = () => {
         });
       console.log(form);
     }
+    
+  
     
 
     useEffect(() => {
@@ -78,7 +81,17 @@ export const Home = () => {
     }
       </Tbody>
       </Table>
-          <div className="buttonDiv">
+        <div className="buttonDiv">
+          <Select
+           style={{width: '20%',marginLeft:"80%"}}
+          >
+            {
+            ["Select Size",5,10,15,20].map((item) => (
+            <option key={item} value={item}>
+              {item}
+            </option>
+            ))} 
+          </Select>
           <Button colorScheme='blue' variant='solid' disabled={page === 1} onClick={() => setPage(page - 1)}>Prev</Button>
           <p>{ page}</p>
           <Button colorScheme='blue' variant='solid' onClick={() => setPage(page + 1)}>Next</Button>
