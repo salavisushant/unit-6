@@ -7,36 +7,29 @@
     <title>Document</title>
 </head>
 <style>
-    .container {
-        display:flex;
-        justify-content:space-between;
-        width:300px;
-        background-color: yellow;
-        margin-left: 30%;
-    }
-    .div1{
-        width:20%;
-        border: 1px solid black; 
-        margin-left:10%
-    }
-     .div2{
-        width:40%;
-        border: 1px solid black;
-        margin-right:15%
-    }
-    h1,p{
-        color:#FFFFFF;
-    }
+
 </style>
 <body>
-    <div class="container">
-        <div class="div1">
-            <img src="https://img.icons8.com/ios-filled/50/ffffff/school.png"/>
-        </div>
-        <div class="div2">
-            <h1>Scholarship</h1>
-            <p>Available</p>
-        </div>
-    </div>
+ 
 </body>
 </html>
+<script>
+
+   const options = {
+	method: 'POST',
+	headers: {
+		'content-type': 'application/json',
+		'X-RapidAPI-Host': 'spoonacular-recipe-food-nutrition-v1.p.rapidapi.com',
+		'X-RapidAPI-Key': '47119f4597msh09e277584c3b071p13f66ejsne28e468805e4'
+	},
+	body: '{"plu_code":"","title":"Kroger Vitamin A & D Reduced Fat 2% Milk","upc":""}'
+};
+
+fetch('https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/food/products/classify?locale=en_us', options)
+	.then(response => response.json())
+	.then(response => console.log(response))
+	.catch(err => console.error(err));
+
+</script>    
+
+
